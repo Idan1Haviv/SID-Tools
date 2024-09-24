@@ -1,0 +1,43 @@
+exclude = [
+    ".bzr",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".nox",
+    ".pants.d",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "koala-service/koala_api/migrations/",
+    "_old"
+]
+
+line-length = 120
+
+[lint]
+ignore = [
+    "F403",
+    "F405",
+    "B019",
+    "E721",
+    "PLW2901",
+    "PLR2004",
+]
+
+select = [
+    "E", 
+    "F", 
+    "B", 
+    "I", 
+    "W", 
+    "N",
+    "PL"
+]
+
+[lint.pylint]
+max-args = 9
