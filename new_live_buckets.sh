@@ -86,7 +86,7 @@ run(){
   tail -F $flow_log $flow_log_one | while read line
   do
     if [[ $line == *"send: "* ]]; then
-      echo "$line" | jq
+      echo "$line" | awk '{print $NF}' | jq
 
     elif [[ $line == *"update_net_usage"* ]] && [[ $line == *"Inserting"* ]]; then
       process_inserting "$line" 
